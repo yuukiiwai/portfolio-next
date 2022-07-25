@@ -14,3 +14,13 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.-black-font{
+  color: black;
+}
+
+.header{
+  width: 100%;
+  height: auto;
+  position: fixed;
+}
