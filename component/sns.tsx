@@ -1,6 +1,6 @@
 import { FC } from "react";
 import Image from 'next/image';
-import styles from '../../styles/Home.module.css'
+import styles from '../styles/Home.module.css'
 
 interface props{
     openCodeS:string,

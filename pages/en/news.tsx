@@ -1,7 +1,7 @@
 import { NextPage } from "next";
 import React from "react";
 import Head from "next/head";
-import Nav from "../component/nav";
+import Nav from "../../component/nav";
 
 const History:NextPage = ()=>{
     return(

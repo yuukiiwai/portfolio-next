@@ -5,10 +5,10 @@ import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import styles from '../styles/Home.module.css'
 import { preNews } from '../type/news'
-import Mydata from './component/mydata'
-import Nav from './component/nav'
-import Sns from './component/sns'
-import Title from './component/title'
+import Mydata from '../component/mydata'
+import Nav from '../component/nav'
+import Sns from '../component/sns'
+import Title from '../component/title'
 
 const Home: NextPage = () => {
   useEffect(()=>{
@@ -30,15 +30,15 @@ const Home: NextPage = () => {
         <Mydata
         dataS='データ'
         name={{
-          S:"名前",
+          St:"名前",
           data:"岩井優希"
         }}
         univ={{
-          S:"大学",
+          St:"大学",
           data:"芝浦工業大学・システム理工学部・電子情報システム学科"
         }}
         club={{
-          S:"サークル",
+          St:"サークル",
           data:"デジクリ"
         }}
         />

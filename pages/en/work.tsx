@@ -1,7 +1,7 @@
 import { NextPage } from "next";
 import  Head  from "next/head";
 import { useEffect, useState } from "react";
-import Nav from "../component/nav";
+import Nav from "../../component/nav";
 import styles from '../../styles/Work.module.css'
 
 type workType = {

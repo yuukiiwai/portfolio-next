@@ -1,5 +1,5 @@
 import { FC, Fragment, useEffect, useState } from "react";
-import { preNews } from "../../type/news";
+import { preNews } from "../type/news";
 import Link from 'next/link'
 const Newses:FC<{lang:string}> = (props)=>{
     const [news,setNews] = useState<preNews[]>([]);
