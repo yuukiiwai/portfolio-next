@@ -1,116 +1,117 @@
-.container {
-  padding: 0 2rem;
+.container{
+    margin-left: 3%;
+    margin-right: 3%;
 }
 
-.main {
-  min-height: 100vh;
-  padding: 4rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.center{
+    text-align: center;
 }
 
-.footer {
-  display: flex;
-  flex: 1;
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
-  justify-content: center;
-  align-items: center;
+.tablecenter{
+    margin: auto;
+    border-collapse: collapse;
+    width: 20%;
 }
 
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
+.welcome{
+    position: relative;
+    background-size: cover;
 }
 
-.title a {
-  color: #0070f3;
-  text-decoration: none;
+.welcome > h1{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 64pt;
+    letter-spacing: 30px;
+    position: absolute;
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    margin: 0;
+    padding: 0;
+    text-shadow:    -1px -1px 0 black, -1px 0 0 black, -1px 1px 0 black,
+                    0 -1px 0 black,    0 1px 0 black,
+                    1px -1px 0 black,  1px 0 0 black,  1px 1px 0 black;
 }
 
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
+.welcome img{
+    filter: blur(8px) brightness(0.8) drop-shadow(0 0 0 green);
+    top:-8px;
+    bottom: -8px;
+    opacity: 10;
 }
 
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
+.datacontainer{
+    margin-left: 3%;
+    font-size: 32pt;
 }
 
-.title,
-.description {
-  text-align: center;
+.datacontainer > .data{
+    margin-top: 2%;
 }
 
-.description {
-  margin: 4rem 0;
-  line-height: 1.5;
-  font-size: 1.5rem;
+.datacontainer > .data > p{
+    margin-left: 3%;
 }
 
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
+.bg_data{
+    background: url(/shibaura.jpg);
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    z-index: 0;
 }
 
-.grid {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
+.bg_data:before{
+    content: '';
+    background: inherit;
+    filter: blur(10px) brightness(1.1) saturate(1.3);
+    position: absolute;
+    top: -10px;
+    left:-10px;
+    right: -10px;
+    bottom: -10px;
+    z-index: -1;
 }
 
-.card {
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 300px;
+.bg_data > .container{
+    padding-left: 1%;
+    padding-right: 1%;
+    text-shadow:-1px -1px 0 white;
+    background-color: rgba(180, 200, 200, 0.4);
 }
 
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+.bg_data > .container > h2{
+    margin-top: 10%;
+    font-size: 50pt;
 }
 
-.card h2 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
+.sns{
+    position: relative;
+    padding-top: 1px;
+    background-color: rgb(200, 255, 250);
 }
 
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
+.sns > .container{
+    text-align: center;
+    padding-top: 5%;
 }
 
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
+.sns >.container> h2{
+    font-size: 68pt;
+    letter-spacing: 11pt;
 }
 
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
-  }
+.sns > .container > h3{
+    padding-top: 3%;
+    font-size: 52pt;
+}
+
+.sns > .container > div > ul > li{
+    transition: 0.2s;
+}
+
+.sns > .container > div > ul > li:hover{
+    transform: scale(1.1);
 }
