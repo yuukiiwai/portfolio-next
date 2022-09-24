@@ -15,32 +15,12 @@ type workType = {
 
 const Work: NextPage = () => {
     const [works,setWorks] = useState<workType[]>([]);
-    const [titles,setTitles] = useState<string[]>([]);
+
     useEffect(()=>{
-        let newworks = [
-            {
-                title:"ポートフォリオサイト",
-                url:"localhost",
-                usageimg:"",
-                backgroundimg:"",
-                sentence:"<h1>どんなサイト？</h1><p>このサイトのこと</p>"
-            },
-            {
-                title:"最適グラボ",
-                url:"https://scf.yukiserv.com",
-                usageimg:"https://drive.google.com/uc?export=view&id=18RLTU38ztJiQB8hIs6z6HjKSZ5bAMb7P",
-                backgroundimg:"/scf.png",
-                sentence:"<h1>どんなサイト?</h1><p>アプリ名からグラボを検索するサイトです。</p>"
-            }
-        ];
-        setWorks(newworks);
-
-        let newtitles = [];
-        for(let i = 0;i<newworks.length;i++){
-            newtitles.push(newworks[i].title);
-        }
-        setTitles(newtitles);
-
+        fetch(process.env.NEXT_PUBLIC_APIB+"works")
+        .then(res => res.json())
+        .then(data=>setWorks(data as workType[]))
+        .catch(()=>{setWorks([])});
     },[]);
 
     return(
@@ -60,8 +40,8 @@ const Work: NextPage = () => {
                 <div className={styles.index}>
                     <h2>目 次</h2>
                     <ul>
-                        {titles.map((item,key)=>{
-                            return(<li key={key}><a href={"#"+key}>{item}</a></li>);
+                        {works.map((item,key)=>{
+                            return(<li key={key}><a href={"#"+key}>{item.title}</a></li>);
                         })}
                     </ul>
                 </div>
