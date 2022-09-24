@@ -1,4 +1,5 @@
 module.exports = {
     siteUrl:"https://portfolio.yukiserv.com",
-    generateRobotsTxt:true
+    generateRobotsTxt:true,
+    sitemapSize:7000,
 };
