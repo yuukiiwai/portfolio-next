@@ -43,7 +43,7 @@ const Home: NextPage = () => {
         }}
         univ={{
           St:"Univer City",
-          data:"Shibaura Institute of Technology / College of Systems Engineering and Science / Department of Electronic Information Systems"
+          data:"Shibaura Institute of Technology"
         }}
         club={{
           St:"Club",

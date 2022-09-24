@@ -35,7 +35,7 @@ const Home: NextPage = () => {
         }}
         univ={{
           St:"大学",
-          data:"芝浦工業大学・システム理工学部・電子情報システム学科"
+          data:"芝浦工業大学"
         }}
         club={{
           St:"サークル",
