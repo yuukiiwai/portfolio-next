@@ -2,6 +2,7 @@ import { NextPage } from "next";
 import React, { useEffect, useState } from "react";
 import Head from "next/head";
 import Nav from "../component/nav";
+import {chakra} from '@chakra-ui/react'
 
 const Tackle:NextPage = ()=>{
     const [tackles,setTackles] = useState<{id:string}[]>([]);
@@ -31,7 +32,7 @@ const Tackle:NextPage = ()=>{
             style={{
                 textAlign:"center"
             }}
-            >日々の研鑽やテックブログの更新をお知らせします。</p>
+            >テックブログの更新をお知らせします。</p>
             <h2
             style={{
                 textAlign:"center"
@@ -55,7 +56,7 @@ const Tackle:NextPage = ()=>{
                                 border: 0,
                                 display: "block",
                                 maxWidth: "99%",
-                                width: "494px",
+                                /* width: "494px", */
                                 marginTop: "10px ", 
                                 position: "static", 
                                 visibility: "visible"

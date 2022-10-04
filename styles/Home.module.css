@@ -18,7 +18,7 @@
     background-size: cover;
 }
 
-.welcome > h1{
+/* .welcome > h1{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 64pt;
     letter-spacing: 30px;
@@ -32,7 +32,7 @@
     text-shadow:    -1px -1px 0 black, -1px 0 0 black, -1px 1px 0 black,
                     0 -1px 0 black,    0 1px 0 black,
                     1px -1px 0 black,  1px 0 0 black,  1px 1px 0 black;
-}
+} */
 
 .welcome img{
     filter: blur(8px) brightness(0.8) drop-shadow(0 0 0 green);
@@ -78,14 +78,18 @@
 .bg_data > .container{
     padding-left: 1%;
     padding-right: 1%;
-    text-shadow:-1px -1px 0 white;
+    color: white;
+    /* text-shadow:-1px -1px 0 white; */
     background-color: rgba(180, 200, 200, 0.4);
+    text-shadow:    -1.4px -1.4px 0 black, -1.4px 0 0 black, -1.4px 1.4px 0 black,
+                    0 -1.4px 0 black,    0 1.4px 0 black,
+                    1.4px -1.4px 0 black,  1.4px 0 0 black,  1.4px 1.4px 0 black;
 }
 
-.bg_data > .container > h2{
+/* .bg_data > .container > h2{
     margin-top: 10%;
     font-size: 50pt;
-}
+} */
 
 .sns{
     position: relative;
@@ -98,15 +102,15 @@
     padding-top: 5%;
 }
 
-.sns >.container> h2{
+/* .sns >.container> h2{
     font-size: 68pt;
     letter-spacing: 11pt;
-}
+} */
 
-.sns > .container > h3{
+/* .sns > .container > h3{
     padding-top: 3%;
     font-size: 52pt;
-}
+} */
 
 .sns > .container > div > ul > li{
     transition: 0.2s;

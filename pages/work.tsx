@@ -3,7 +3,9 @@ import  Head  from "next/head";
 import  Image  from "next/image";
 import { useEffect, useState } from "react";
 import Nav from "../component/nav";
-import styles from '../styles/Work.module.css'
+import {chakra,Box} from '@chakra-ui/react'
+
+import styles from '../styles/Work.module.css';
 
 type workType = {
     title:string,
@@ -37,14 +39,39 @@ const Work: NextPage = () => {
                 <div className={styles.head1}>
                     <h1>作 品</h1>
                 </div>
-                <div className={styles.index}>
-                    <h2>目 次</h2>
-                    <ul>
-                        {works.map((item,key)=>{
-                            return(<li key={key}><a href={"#"+key}>{item.title}</a></li>);
-                        })}
-                    </ul>
-                </div>
+                <chakra.div
+                position={"relative"}
+                marginTop={"1%"}
+                width={{base:"95%",sm:"90%",md:"40%",lg:"30%"}}
+                border={"3px dashed whitesmoke"}
+                color={"white"}
+                marginLeft={"auto"}
+                marginRight={"auto"}
+                >
+                    <Box
+                    marginTop={"1%"}
+                    marginBottom={"1%"}
+                    marginLeft={{base:"10%",sm:"10%",md:"10%"}}
+                    >
+                        <chakra.h2
+                        letterSpacing={{base:"10px",md:"15px"}}
+                        fontSize={{base:"18pt",sm:"20pt",md:"24pt"}}
+                        >目 次</chakra.h2>
+                        <ul>
+                            {works.map((item,key)=>{
+                                return(<li key={key}>
+                                        <chakra.a
+                                        href={"#"+key}
+                                        color={"white"}
+                                        fontSize={{base:"14pt",sm:"16pt",md:"20pt"}}
+                                        >
+                                            {item.title}
+                                        </chakra.a>
+                                    </li>);
+                            })}
+                        </ul>
+                    </Box>
+                </chakra.div>
             </div>
             {/* 内容は背景が関連画像のぼかし、右半分が利用gif、左半分がマークダウン説明文 */}
             {works.map((item,key)=>{
@@ -63,29 +90,49 @@ const Work: NextPage = () => {
                     className={styles.imgback}
                     >
                         <div className={styles.prodtitle}>
-                            <h2>{item.title}</h2>
-                            <a href={item.url}>{item.url}</a>
+                            <chakra.h2
+                            letterSpacing={{base:"2pt",sm:"1pt"}}
+                            fontSize={{base:"19pt",sm:"20pt",md:"26pt",lg:"32pt"}}
+                            >{item.title}</chakra.h2>
+                            <chakra.a
+                            href={item.url}
+                            fontSize={{base:"11pt",sm:"12pt",md:"18pt",lg:"24pt"}}
+                            >
+                                {item.url}
+                            </chakra.a>
                         </div>
-                        <div className={styles.prod}>
-                            <div
-                            className={styles.prodleft}
+                        <chakra.div
+                        display={{base:"box",md:"flex"}}
+                        width={"100%"}
+                        >
+                            <chakra.div
+                            flexGrow={{base:0,md:1}}
+                            width={{base:"100%",md:"50%"}}
                             >
-                                <img src={item.usageimg} alt="使い方" />
-                            </div>
-                            <div
-                            className={styles.prodright}
+                                <chakra.img src={item.usageimg} alt="使い方" 
+                                marginTop={{base:"10px",md:"20%"}}
+                                marginLeft={"5%"}
+                                width={"90%"}
+                                border={{base:"2px groove black",md:"3px groove black"}}
+                                />
+                            </chakra.div>
+                            <chakra.div
+                            flexGrow={{base:0,md:1}}
+                            width={{base:"100%",md:"50%"}}
+                            marginTop={{base:"10px",md:"5%"}}
+                            borderLeft={"5px solid rgb(172, 182, 138)"}
                             >
-                                <div
+                                <chakra.div
                                 dangerouslySetInnerHTML={{
                                     __html:item.sentence,
                                 }}
-                                style={{
-                                    marginLeft:"3%"
-                                }}
-                                className={styles.content}
-                                />
-                            </div>
-                        </div>
+                                marginLeft={"3%"}
+                                marginRight={"3%"}
+                                backgroundColor={"rgba(201, 199, 94, 0.4)"}
+                                >
+                                </chakra.div>
+                            </chakra.div>
+                        </chakra.div>
                     </div>
                 );
             })}

@@ -1,17 +1,18 @@
-import Link from "next/link";
 import { FC } from "react";
+import { chakra,Link } from "@chakra-ui/react";
+import Navlink from "./navlink";
 
 const Nav:FC<{lang?:string,root:string}> = (props)=>{
     if(props.lang === "en"){
         return(
             <nav className='navigation'>
                 <ul className='nav-item'>
-                    <li><Link href={"/en"}>Top</Link></li>
-                    <li><Link href={"/en/work"}>Work</Link></li>
-                    <li><Link href={"/en/history"}>History</Link></li>
-                    <li><Link href={"/en/tackle"}>Tackle</Link></li>
-                    <li><Link href={"/en/news"}>News</Link></li>
-                    <li><Link href={"/"+props.root}>Japanese</Link></li>
+                    <li><Navlink href="/en" text="Top"/></li>
+                    <li><Navlink href={"/en/work"} text="Work"/></li>
+                    <li><Navlink href={"/en/history"} text="History"/></li>
+                    <li><Navlink href={"/en/tackle"} text="Tackle"></Navlink></li>
+                    <li><Navlink href={"/en/news"} text="News"></Navlink></li>
+                    <li><Navlink href={"/"+props.root} text="Japanese"></Navlink></li>
                 </ul>
             </nav>
         );
@@ -19,12 +20,12 @@ const Nav:FC<{lang?:string,root:string}> = (props)=>{
     return(
         <nav className='navigation'>
             <ul className='nav-item'>
-                <li><Link href={"/"}>トップ</Link></li>
-                <li><Link href={"/work"}>作品</Link></li>
-                <li><Link href={"/history"}>経歴</Link></li>
-                <li><Link href={"/tackle"}>挑戦</Link></li>
-                <li><Link href={"/news"}>最新情報</Link></li>
-                <li><Link href={"/en/"+props.root}>英語</Link></li>
+                <li><Navlink href={"/"} text="トップ"></Navlink></li>
+                <li><Navlink href={"/work"} text="作品"></Navlink></li>
+                <li><Navlink href={"/history"} text="経歴"></Navlink></li>
+                <li><Navlink href={"/tackle"} text="挑戦"></Navlink></li>
+                <li><Navlink href={"/news"} text="最新情報"></Navlink></li>
+                <li><Navlink href={"/en/"+props.root} text="英語"></Navlink></li>
             </ul>
         </nav>
     );

@@ -6,11 +6,12 @@
     margin-top: 5%;
 }
 
-.index{
+/* .index{
     position: relative;
     margin-top: 1%;
-    margin-left: 35%;
-    margin-right: 35%;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
     color: white;
     border: 3px dashed whitesmoke;
 }
@@ -29,7 +30,7 @@
 .index > ul>li>a{
     color: white;
     font-size: 20pt;
-}
+} */
 
 .top{
     background: url(/codeback.png);
@@ -96,14 +97,4 @@
 
 .prodtitle{
     text-align: center;
-}
-
-.prodtitle > h2{
-    text-align: center;
-    letter-spacing: 2pt;
-    font-size: 32pt;
-}
-
-.prodtitle > a{
-    font-size: 24pt;
 }
