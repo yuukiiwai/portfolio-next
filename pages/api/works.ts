@@ -18,6 +18,6 @@ export default function handler(
     url:"https://xyz",
     backgroundimg:"https://xyz",
     usageimg:"https://xyz",
-    sentence:"<h1>kokodayo</h1>"
+    sentence:"<h3>kokodayo</h3><p>kondaku</p>"
   }])
 }

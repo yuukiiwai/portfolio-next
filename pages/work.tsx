@@ -3,7 +3,7 @@ import  Head  from "next/head";
 import  Image  from "next/image";
 import { useEffect, useState } from "react";
 import Nav from "../component/nav";
-import {chakra,Box} from '@chakra-ui/react'
+import {chakra,Box, extendTheme, ChakraProvider} from '@chakra-ui/react'
 
 import styles from '../styles/Work.module.css';
 
@@ -14,6 +14,29 @@ type workType = {
     usageimg:string,
     sentence:string,
 }
+
+const theme = extendTheme({
+    styles:{
+        global:{
+            h3:{
+                fontSize:{
+                    base:"16pt",
+                    sm:"20pt",
+                    md:"24pt",
+                    lg:"28pt"
+                }
+            },
+            p:{
+                fontSize:{
+                    base:"11pt",
+                    sm:"14pt",
+                    md:"18pt",
+                    lg:"20pt"
+                }
+            }
+        }
+    }
+})
 
 const Work: NextPage = () => {
     const [works,setWorks] = useState<workType[]>([]);
@@ -101,6 +124,7 @@ const Work: NextPage = () => {
                             <chakra.a
                             href={item.url}
                             fontSize={{base:"11pt",sm:"12pt",md:"18pt",lg:"24pt"}}
+                            color={"blue"}
                             >
                                 {item.url}
                             </chakra.a>
@@ -126,16 +150,17 @@ const Work: NextPage = () => {
                             marginTop={{base:"10px",md:"5%"}}
                             borderLeft={"5px solid rgb(172, 182, 138)"}
                             >
-                                <chakra.div
-                                dangerouslySetInnerHTML={{
-                                    __html:item.sentence,
-                                }}
-                                marginLeft={"3%"}
-                                marginRight={"3%"}
-                                backgroundColor={"rgba(201, 199, 94, 0.4)"}
-                                rounded={"md"}
-                                >
-                                </chakra.div>
+                                <ChakraProvider theme={theme}>
+                                    <chakra.div
+                                    dangerouslySetInnerHTML={{
+                                        __html:item.sentence,
+                                    }}
+                                    marginLeft={"3%"}
+                                    marginRight={"3%"}
+                                    backgroundColor={"rgba(201, 199, 94, 0.4)"}
+                                    rounded={"md"}
+                                    />
+                                </ChakraProvider>
                             </chakra.div>
                         </chakra.div>
                     </div>
