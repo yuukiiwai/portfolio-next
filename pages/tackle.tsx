@@ -40,7 +40,7 @@ const Tackle:NextPage = ()=>{
             >Note一覧</h2>
             <div
             style={{
-                width:"494px",
+                maxWidth:"494px",
                 margin:"auto"
             }}
             >
@@ -56,7 +56,7 @@ const Tackle:NextPage = ()=>{
                                 border: 0,
                                 display: "block",
                                 maxWidth: "99%",
-                                /* width: "494px", */
+                                width: "494px",
                                 marginTop: "10px ", 
                                 position: "static", 
                                 visibility: "visible"
