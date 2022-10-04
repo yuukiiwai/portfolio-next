@@ -47,6 +47,7 @@ const Work: NextPage = () => {
                 color={"white"}
                 marginLeft={"auto"}
                 marginRight={"auto"}
+                rounded={"lg"}
                 >
                     <Box
                     marginTop={"1%"}
@@ -89,7 +90,10 @@ const Work: NextPage = () => {
                     id={key+""}
                     className={styles.imgback}
                     >
-                        <div className={styles.prodtitle}>
+                        <chakra.div
+                        className={styles.prodtitle}
+                        rounded={"md"}
+                        >
                             <chakra.h2
                             letterSpacing={{base:"2pt",sm:"1pt"}}
                             fontSize={{base:"19pt",sm:"20pt",md:"26pt",lg:"32pt"}}
@@ -100,7 +104,7 @@ const Work: NextPage = () => {
                             >
                                 {item.url}
                             </chakra.a>
-                        </div>
+                        </chakra.div>
                         <chakra.div
                         display={{base:"box",md:"flex"}}
                         width={"100%"}
@@ -129,6 +133,7 @@ const Work: NextPage = () => {
                                 marginLeft={"3%"}
                                 marginRight={"3%"}
                                 backgroundColor={"rgba(201, 199, 94, 0.4)"}
+                                rounded={"md"}
                                 >
                                 </chakra.div>
                             </chakra.div>
