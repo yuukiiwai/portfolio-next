@@ -19,6 +19,9 @@ const theme = extendTheme({
     styles:{
         global:{
             h3:{
+                fontWeight:{
+                    base:"bold"
+                },
                 fontSize:{
                     base:"12pt",
                     sm:"16pt",
