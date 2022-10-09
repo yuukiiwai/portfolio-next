@@ -16,8 +16,8 @@ export default function handler(
   res.status(200).json([{ 
     title: "nanika",
     url:"https://xyz",
-    backgroundimg:"https://xyz",
-    usageimg:"https://xyz",
+    backgroundimg:"https://deliver.cdn.nicomanga.jp/thumb/3521965p",
+    usageimg:"https://deliver.cdn.nicomanga.jp/thumb/3521965p",
     sentence:"<h3>kokodayo</h3><p>kondaku</p>"
   }])
 }

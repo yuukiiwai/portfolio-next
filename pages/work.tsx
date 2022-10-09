@@ -20,18 +20,18 @@ const theme = extendTheme({
         global:{
             h3:{
                 fontSize:{
-                    base:"16pt",
-                    sm:"20pt",
-                    md:"24pt",
-                    lg:"28pt"
+                    base:"12pt",
+                    sm:"16pt",
+                    md:"18pt",
+                    lg:"20pt"
                 }
             },
             p:{
                 fontSize:{
                     base:"11pt",
-                    sm:"14pt",
-                    md:"18pt",
-                    lg:"20pt"
+                    sm:"13pt",
+                    md:"15pt",
+                    lg:"17pt"
                 }
             }
         }
@@ -157,7 +157,7 @@ const Work: NextPage = () => {
                                     }}
                                     marginLeft={"3%"}
                                     marginRight={"3%"}
-                                    backgroundColor={"rgba(201, 199, 94, 0.4)"}
+                                    backgroundColor={"rgba(220, 220, 220, 0.85)"}
                                     rounded={"md"}
                                     />
                                 </ChakraProvider>
