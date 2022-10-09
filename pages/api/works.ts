@@ -17,7 +17,7 @@ export default function handler(
     title: "nanika",
     url:"https://xyz",
     backgroundimg:"https://deliver.cdn.nicomanga.jp/thumb/3521965p",
-    usageimg:"https://deliver.cdn.nicomanga.jp/thumb/3521965p",
-    sentence:"<h3>kokodayo</h3><p>kondaku</p>"
+    usageimg:"https://images-yukiserv-com.s3.ap-northeast-1.amazonaws.com/saitekishoukai.gif",
+    sentence:"<h3>kokodayo</h3><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p>"
   }])
 }

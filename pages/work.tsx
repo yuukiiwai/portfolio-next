@@ -152,12 +152,15 @@ const Work: NextPage = () => {
                             width={{base:"100%",md:"50%"}}
                             marginTop={{base:"10px",md:"5%"}}
                             borderLeft={"5px solid rgb(172, 182, 138)"}
+                            
                             >
                                 <ChakraProvider theme={theme}>
                                     <chakra.div
                                     dangerouslySetInnerHTML={{
                                         __html:item.sentence,
                                     }}
+                                    maxH={{base:"35vh",sm:"40vh",md:"60vh",lg:"70vh"}}
+                                    overflowY={"scroll"}
                                     marginLeft={"3%"}
                                     marginRight={"3%"}
                                     backgroundColor={"rgba(220, 220, 220, 0.85)"}
