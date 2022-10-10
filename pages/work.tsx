@@ -144,6 +144,7 @@ const Work: NextPage = () => {
                                 marginTop={{base:"10px",md:"20%"}}
                                 marginLeft={"5%"}
                                 width={"90%"}
+                                maxH={{base:"40vh",md:"100vh"}}
                                 border={{base:"2px groove black",md:"3px groove black"}}
                                 />
                             </chakra.div>
@@ -159,7 +160,7 @@ const Work: NextPage = () => {
                                     dangerouslySetInnerHTML={{
                                         __html:item.sentence,
                                     }}
-                                    maxH={{base:"35vh",sm:"40vh",md:"60vh",lg:"70vh"}}
+                                    maxH={{base:"45vh",md:"70vh"}}
                                     overflowY={"scroll"}
                                     marginLeft={"3%"}
                                     marginRight={"3%"}
