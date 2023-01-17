@@ -35,60 +35,9 @@ const Work: NextPage = () => {
             root="work"
             />
                 <div className={styles.head1}>
-                    <h1>Works</h1>
-                </div>
-                <div className={styles.index}>
-                    <h2>Index</h2>
-                    <ul>
-                        {works.map((item,key)=>{
-                            return(<li key={key}><a href={"#"+key}>{item.title}</a></li>);
-                        })}
-                    </ul>
+                    <h1>MAKING</h1>
                 </div>
             </div>
-            {/* 内容は背景が関連画像のぼかし、右半分が利用gif、左半分がマークダウン説明文 */}
-            {works.map((item,key)=>{
-                return(
-                    <div 
-                    key={key}
-                    style={{
-                        background:"url("+item.backgroundimg+")",
-                        backgroundSize:'cover',
-                        position:'relative',
-                        height:'100vh',
-                        zIndex:0,
-                        overflow:"hidden",
-                    }}
-                    id={key+""}
-                    className={styles.imgback}
-                    >
-                        <div className={styles.prodtitle}>
-                            <h2>{item.title}</h2>
-                            <a href={item.url}>{item.url}</a>
-                        </div>
-                        <div className={styles.prod}>
-                            <div
-                            className={styles.prodleft}
-                            >
-                                <img src={item.usageimg} alt="usage" />
-                            </div>
-                            <div
-                            className={styles.prodright}
-                            >
-                                <div
-                                dangerouslySetInnerHTML={{
-                                    __html:item.sentence,
-                                }}
-                                style={{
-                                    marginLeft:"3%"
-                                }}
-                                className={styles.content}
-                                />
-                            </div>
-                        </div>
-                    </div>
-                );
-            })}
         </div>
     );
 }

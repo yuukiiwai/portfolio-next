@@ -1,14 +1,12 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
-import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import styles from '../styles/Home.module.css'
-import { preNews } from '../type/news'
-import Mydata from '../component/mydata'
 import Nav from '../component/nav'
-import Sns from '../component/sns'
-import Title from '../component/title'
+import Page1 from '../component/index/page1'
+import Page2 from '../component/index/page2'
+import Page3 from '../component/index/page3'
+import Page4 from '../component/index/page4'
 
 const Home: NextPage = () => {
   useEffect(()=>{
@@ -21,31 +19,14 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Nav
+      lang='ja'
       root=''
       />
       <main className={styles.main}>
-        <Title
-        name='岩井 優希'
-        />
-        <Mydata
-        dataS='データ'
-        name={{
-          St:"名前",
-          data:"岩井優希"
-        }}
-        univ={{
-          St:"大学",
-          data:"芝浦工業大学"
-        }}
-        club={{
-          St:"サークル",
-          data:"デジクリ"
-        }}
-        />
-        <Sns
-        openCodeS='公開コード'
-        contactS='連絡先'
-        />
+        <Page1/>
+        <Page2/>
+        <Page3/>
+        <Page4 />
       </main>
     </div>
   )

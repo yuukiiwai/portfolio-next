@@ -4,10 +4,18 @@
 }
 
 .navigation{
+    position: fixed;
+    display: grid;
+    top: 0;
+    left: 0;
     margin: 0;
     padding-top: 10px;
     padding-bottom: 10px;
     background-color: whitesmoke;
+    width: 100%;
+    z-index: 99;
+
+    grid-template-columns: 1fr 200px;
 }
 
 .navigation > ul{
@@ -15,27 +23,25 @@
     padding: 0;
     list-style: none;
 }
-
 .navigation > ul li{
     display: inline-block;
     padding-top: 3px;
     padding-bottom: 3px;
     margin-left: 2%;
+    font-size: 18pt;
 }
-
-/* .navigation > ul li a{
+.navigation > ul > li > a{
     text-decoration: none;
     color: black;
+}
+.navigation > div{
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+.navigation > div > a{
     font-size: 18pt;
-    font-weight: normal;
-} */
-
-/* .navigation > ul li a:hover{
-    color: rgb(136, 136, 136);
-} */
-
-ul {
-    list-style: none;
+    text-decoration: none;
+    color: black;
 }
 
 .paralist > ul li{
@@ -47,3 +53,4 @@ ul {
 .center{
     text-align: center;
 }
+
