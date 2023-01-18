@@ -211,28 +211,34 @@
     width: 12px;
     height: 12px;
     background: black;
-    position: absolute;
     left: 175px;
     top: 15px;
     border-radius: 100%;
 }
 
-.strong{
-    padding-top: 20px;
-    text-align: center;
-    font-size: 38pt;
-    font-family: "HG明朝B";
-    line-height: 70pt;
-}
-
-.exp{
-    display: block;
+.strongs{
     width: fit-content;
-
-    padding-top: 10px;
-    font-size: 18pt;
     font-family: "HG明朝B";
-    line-height: 22pt;
+    margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
+}
+.strongs>ul>li{
+    list-style: none;
+    padding-bottom: 30px;
+}
+.strongs>ul>li>p{
+    margin-bottom: 10px;
+    font-size: 32pt;
+}
+
+.strongs>ul>li>ul{
+    margin-left: 20px;
+}
+.strongs>ul>li>ul>li{
+    width: fit-content;
+    list-style: none;
+    font-size: 18pt;
+    border-bottom: 1px solid black;
+    margin-bottom: 10px;
 }

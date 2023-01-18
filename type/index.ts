@@ -7,3 +7,7 @@ export type history = {
     when:string
     event:string
 }
+export type strong = {
+    abst:string,
+    exp:string[]
+}
