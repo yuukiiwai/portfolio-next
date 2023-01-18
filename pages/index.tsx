@@ -22,7 +22,7 @@ const Home: NextPage = () => {
       lang='ja'
       root=''
       />
-      <main className={styles.main}>
+      <main className="main">
         <Page1/>
         <Page2/>
         <Page3/>
