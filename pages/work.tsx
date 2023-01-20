@@ -3,8 +3,6 @@ import  Head  from "next/head";
 import { useEffect, useState } from "react";
 import Nav from "../component/nav";
 
-import styles from '../styles/Work.module.css';
-import Index from "../component/work";
 import { workType } from "../type/work";
 import Introduction from "../component/work/intro";
 import Page1 from "../component/work/page1";
@@ -14,7 +12,7 @@ const Work: NextPage = () => {
     const [titles,setTitles] = useState<string[]>([]);
 
     useEffect(()=>{
-        fetch(process.env.NEXT_PUBLIC_APIB+"works")
+        fetch(process.env.NEXT_PUBLIC_APIB+"work")
         .then(res => res.json())
         .then(data=>{
             setWorks(data);

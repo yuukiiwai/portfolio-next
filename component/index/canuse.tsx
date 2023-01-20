@@ -1,7 +1,8 @@
 import { FC } from "react";
 import styles from "../../styles/Home.module.css";
+import { langstruct } from "../../type";
 interface props{
-    imgurls:string[]
+    langs:langstruct[]
 }
 const Canuse : FC<props> = (props:props) =>{
     return(
@@ -9,9 +10,9 @@ const Canuse : FC<props> = (props:props) =>{
             <div>
                 <span>何かを作ったことがある</span>
                 <div>
-                {props.imgurls.map((item,key)=>{
+                {props.langs.map((item,key)=>{
                     return(
-                    <img key={key} src={item} width="72" height="72"/>
+                    <img key={key} src={item.imgurl} width="72" height="72"/>
                     )
                 })}
                 </div>

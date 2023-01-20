@@ -2,50 +2,38 @@ import { NextPage } from "next";
 import React, { useEffect, useState } from "react";
 import Head from "next/head";
 import Nav from "../component/nav";
-import {chakra} from '@chakra-ui/react'
+import styles from "../styles/Blog.module.css";
 
 const Blog:NextPage = ()=>{
-    const [tackles,setTackles] = useState<{id:string}[]>([]);
+    const [blogs,setBlogs] = useState<{id:string}[]>([]);
     useEffect(()=>{
-        fetch(process.env.NEXT_PUBLIC_APIB+"tackles")
+        fetch(process.env.NEXT_PUBLIC_APIB+"blog")
         .then(res=>res.json())
         .then(data=>{
-            setTackles(data);
+            setBlogs(data);
         });
     },[])
     return(
         <div>
             <Head>
                 <title>岩井優希 | テックブログ</title>
-                <meta name="description" content="直近のテックブログ(note)一覧" />
+                <meta name="description" content="ブログ" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <Nav
             lang="ja"
             root="blog"
             />
-            <h1
-            style={{
-                textAlign:"center"
-            }}
-            >挑戦</h1>
-            <p
-            style={{
-                textAlign:"center"
-            }}
-            >テックブログの更新をお知らせします。</p>
-            <h2
-            style={{
-                textAlign:"center"
-            }}
-            >Note一覧</h2>
+            <main className="main">
+                <h1 className={styles.head}>ブログ</h1>
+            </main>
             <div
             style={{
                 maxWidth:"494px",
                 margin:"auto"
             }}
             >
-                {tackles.map((item,key)=>{
+                {blogs.map((item,key)=>{
                     return(
                         <React.Fragment
                         key={key}

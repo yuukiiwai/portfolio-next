@@ -1,13 +1,17 @@
 export type studystate = {
-    will:string[]
-    ing:string[]
-    can:string[]
+    will:langstruct[]
+    ing:langstruct[]
+    can:langstruct[]
+}
+export type langstruct = {
+    language:string
+    imgurl:string
 }
 export type history = {
     when:string
     event:string
 }
 export type strong = {
-    abst:string,
-    exp:string[]
+    strong:string,
+    exps:string[]
 }

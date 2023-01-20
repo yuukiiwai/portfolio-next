@@ -8,17 +8,20 @@ const Strong:FC = () =>{
     useEffect(()=>{
         fetch(process.env.NEXT_PUBLIC_APIB+"index/strong")
         .then(res=>res.json())
-        .then(data=>setStrong(data));
-    })
+        .then(data=>{
+            console.log(data);
+            setStrong(data)
+        });
+    },[])
 
     return(
         <div className={styles.strongs}>
             <ul>
                 {strong.map((item,key)=>{return(
                     <li key={key}>
-                        <p>{item.abst}</p>
+                        <p>{item.strong}</p>
                         <ul>
-                        {item.exp.map((exp,i)=>{return(
+                        {item.exps.map((exp,i)=>{return(
                             <li key={i}>{exp}</li>
                         )})}
                         </ul>
