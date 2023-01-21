@@ -29,6 +29,7 @@ const Work: NextPage = () => {
         const worksintro = works.map((item,key)=>{
             return(
             <Introduction
+            key={key}
             item={item}
             id={key}
             />
