@@ -1,25 +1,10 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
-import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import styles from '../../styles/Home.module.css'
-import { preNews } from '../../type/news'
 import Nav from '../../component/nav'
-import Sns from '../../component/index/sns'
-import Title from '../../component/index/title'
-import Page1 from '../../component/index/page1'
 
 const Home: NextPage = () => {
-  const [news,setNews] = useState<preNews[]>([]);
-  useEffect(()=>{
-    setNews([
-      {
-        title:"I participated in a direct sourcing event held by LeverTech Rookie.",
-        id:0
-      }
-    ]);
-  },[]);
   return (
     <div>
       <Head>
