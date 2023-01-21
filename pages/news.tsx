@@ -2,6 +2,7 @@ import { NextPage } from "next";
 import React from "react";
 import Head from "next/head";
 import Nav from "../component/nav";
+import styles from "../styles/News.module.css";
 
 const History:NextPage = ()=>{
     return(
@@ -12,18 +13,13 @@ const History:NextPage = ()=>{
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <Nav
+            lang="ja"
             root="news"
             />
-            <h1
-            style={{
-                textAlign:"center"
-            }}
-            >最新情報</h1>
-            <p
-            style={{
-                textAlign:"center"
-            }}
-            >ニュースページです。<br/>公的に出場したことを書いていこうと思います。</p>
+            <main className="main">
+                <h1 className={styles.head}>ニュース</h1>
+                <p>MAKING</p>
+            </main>
         </div>
     );
 }

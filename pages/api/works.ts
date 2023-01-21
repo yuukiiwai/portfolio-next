@@ -1,23 +1,21 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next'
-
-type workType = {
-  title:string,
-  url:string,
-  backgroundimg:string,
-  usageimg:string,
-  sentence:string,
-}
+import { workType } from '../../type/work'
 
 export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<workType[]>
 ) {
-  res.status(200).json([{ 
-    title: "nanika",
-    url:"https://xyz",
-    backgroundimg:"https://deliver.cdn.nicomanga.jp/thumb/3521965p",
-    usageimg:"https://images-yukiserv-com.s3.ap-northeast-1.amazonaws.com/saitekishoukai.gif",
-    sentence:"<h3>kokodayo</h3><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p><p>kondaku</p>"
-  }])
+  res.status(200).json([
+    { 
+      title: "nanika",
+      url:"https://xyz",
+      slide:`<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRbOvzj75n1gM1--q6sIlMd8fRhlHsyMvVM2TY9upUTtdJBVk9Y4f0BHGOi6C_ar79TstuqK9ea3BdY/embed?start=false&loop=false&delayms=3000" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>`
+    },
+    {
+      title:"nanika2",
+      url:"https://xy",
+      slide:`<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRbOvzj75n1gM1--q6sIlMd8fRhlHsyMvVM2TY9upUTtdJBVk9Y4f0BHGOi6C_ar79TstuqK9ea3BdY/embed?start=false&loop=false&delayms=3000" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>`
+    }
+  ])
 }
