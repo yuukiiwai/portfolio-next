@@ -45,7 +45,7 @@ export default function handler(
       "https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg",
       "https://www.vectorlogo.zone/logos/unity3d/unity3d-icon.svg",
       "https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg",
-      "https://cdn.worldvectorlogo.com/logos/nextjs-2.svg"
+      "https://cdn.worldvectorlogo.com/logos/nextjs-2.svg",
     ]
   })
 }
