@@ -57,5 +57,14 @@
 }
 
 @media screen and (max-width:560px) {
-    
+    .index>ol>li{
+        margin-top: 20px;
+        font-size: 14pt;
+    }
+    .prodtitle>h2{
+        font-size: 16pt;
+    }
+    .prodtitle>a{
+        font-size: 13pt;
+    }
 }
