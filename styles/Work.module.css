@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap');
+
 .page{
-    font-family: "HG明朝B";
+    font-family: "HG明朝B",'Sawarabi Mincho',serif;
     height: 100vh;
 }
 .title{
@@ -29,7 +31,7 @@
 
 .prod{
     display: grid;
-    font-family: "HG明朝B";
+    font-family: "HG明朝B",'Sawarabi Mincho',serif;
     height: 100vh;
 
     grid-template-rows: 80px 100px 1fr;

@@ -1,6 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap');
 .head{
     text-align: center;
     padding-top: 100px;
-    font-family: "HG明朝B";
+    font-family: "HG明朝B",'Sawarabi Mincho',serif;
     font-size: 32pt;
 }
