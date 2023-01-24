@@ -55,3 +55,7 @@
     height: 95%;
     width: 95%;
 }
+
+@media screen and (max-width:560px) {
+    
+}

@@ -239,3 +239,247 @@
     border-bottom: 1px solid black;
     margin-bottom: 10px;
 }
+
+@media screen and (max-width:1025px) {
+    
+}
+@media screen and (max-width:560px) {
+    .name{
+        padding-top: 40%;
+        text-align: center;
+        font-family: "HG明朝B";
+        font-size: 40pt;
+    }
+
+    .index{
+        font-size: 16pt;
+        text-align: center;
+        font-family: "HG明朝B";
+    
+        list-style: none;
+    
+        margin-top: 90px;
+        width: 250px;
+        margin-left: auto;
+        margin-right: auto;
+        border: 3px solid black;
+        border-radius: 30px;
+    }
+    .index > li{
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .sectionhead{
+        text-align: center;
+        font-size: 16pt;
+        font-family: "HG明朝B";
+    
+        padding-top: 80px;
+    }
+
+    .pgstudycontent{
+        box-sizing: border-box;
+        height: calc(100vh - 80px - 20pt);
+        width: 100%;
+    
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 10px 1fr 10px 2fr;
+    }
+
+    .willstudy{
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .willstudy > div{
+        position: relative;
+        top: 20px;
+    
+        /* background-color: #D4F2FF; */
+        border: 1px solid black;
+        border-radius: 20px;
+        height: calc(100% - 20px);
+    }
+    .willstudy > div > span{
+        position: relative;
+        font-size: 12pt;
+        font-family: "HGｺﾞｼｯｸM";
+        width: fit-content;
+        padding-left: 10px;
+        padding-right: 10px;
+        top: -10px;
+    
+        /* background-color: #8AF0FF; */
+        background-color: white;
+    
+        border: 1px solid black;
+        border-radius: 5px;
+    }
+    .willstudy > div > div{
+        margin-left: 30px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .willstudy > div > div >img{
+        width: 40px;
+        height: 40px;
+        padding-bottom: 30px;
+    }
+    
+    .studying{
+        grid-column: 1;
+        grid-row: 3;
+    }
+    .studying > div{
+        position: relative;
+        top: 10px;
+    
+        /* background-color: #DAFFD4; */
+        border: 1px solid black;
+        border-radius: 20px;
+        height: calc(100% - 20px);
+    }
+    .studying > div > span{
+        position: relative;
+        font-size: 12pt;
+        font-family: "HGｺﾞｼｯｸM";
+        width: fit-content;
+        padding-left: 10px;
+        padding-right: 10px;
+        top: -10px;
+    
+        /* background-color: #8AFF94; */
+        background-color: white;
+
+        border: 1px solid black;
+        border-radius: 5px;
+    }
+    .studying > div > div{
+        margin-left: 30px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .studying > div > div >img{
+        width: 40px;
+        height: 40px;
+        padding-bottom: 20px;
+    }
+    
+    .canuse{
+        grid-column: 1;
+        grid-row: 5;
+    }
+    .canuse > div{
+        position: relative;
+        top: 10px;
+    
+        /* background-color: #FFFDAA; */
+        border: 1px solid black;
+        border-radius: 20px;
+        height: calc(100% - 20px);
+    }
+    .canuse > div > span{
+        position: relative;
+        font-size: 12pt;
+        font-family: "HGｺﾞｼｯｸM";
+        margin-left: 80px;
+        padding-left: 10px;
+        padding-right: 10px;
+        top: -10px;
+    
+        /* background-color: #FFDD4A; */
+        background-color: white;
+    
+        border: 1px solid black;
+        border-radius: 10px;
+    }
+    .canuse > div > div{
+        margin-left: 30px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        height: calc(100% - 20px);
+    }
+    .canuse > div > div >img{
+        width: 30px;
+        height: 30px;
+        padding-bottom: 20px;
+    }
+
+    .history{
+        margin-top: 20px;
+        width: 100%;
+    
+        font-family: "HG明朝B";
+        font-size: 11pt;
+    }
+    
+    .history > ul{
+        width: fit-content;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .history > ul > li{
+        overflow: hidden;
+        margin: 0;
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr;
+        border-bottom: 1px rgba(128, 128, 128, 0.582) solid;
+    }
+    .history > ul > li *{
+        padding-top: 10px;
+    }
+    .history > ul > li > span{
+        grid-column: 1;
+        margin-left: 0;
+        margin-right: auto;
+    }
+    .history > ul > li > div{
+        grid-column: 1;
+        padding-left: 15px;
+        min-height: 0px;
+        padding-bottom: 10px;
+        border-left: 0px;
+    }
+    .history > ul > li > div:before{
+        position: absolute;
+        content: '';
+        width: 0px;
+        height: 0px;
+        background: black;
+        left: 0px;
+        top: 0px;
+        border-radius: 100%;
+    }
+    
+
+    .strongs{
+        width: fit-content;
+        font-family: "HG明朝B";
+        margin-top: 50px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .strongs>ul>li{
+        list-style: none;
+        padding-bottom: 30px;
+    }
+    .strongs>ul>li>p{
+        margin-bottom: 10px;
+        font-size: 15pt;
+    }
+    
+    .strongs>ul>li>ul{
+        margin-left: 20px;
+    }
+    .strongs>ul>li>ul>li{
+        width: fit-content;
+        list-style: none;
+        font-size: 11pt;
+        border-bottom: 1px solid black;
+        margin-bottom: 10px;
+    }
+}

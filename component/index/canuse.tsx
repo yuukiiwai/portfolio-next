@@ -12,7 +12,7 @@ const Canuse : FC<props> = (props:props) =>{
                 <div>
                 {props.langs.map((item,key)=>{
                     return(
-                    <img key={key} src={item.imgurl} width="72" height="72"/>
+                    <img key={key} src={item.imgurl}/>
                     )
                 })}
                 </div>

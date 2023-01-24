@@ -14,7 +14,7 @@ const Studying : FC<props> = (props : props) =>{
                 <div>
                 {props.langs.map((item,key)=>{
                     return(
-                    <img key={key} src={item.imgurl} width="100" height="100"/>
+                    <img key={key} src={item.imgurl}/>
                     )
                 })}
                 </div>
