@@ -8,7 +8,6 @@ import Willstudy from "./willstudy";
 const Page2 : FC = () => {
     const[tools,setTools] = useState<studystate>({will:[],ing:[],can:[]});
     useEffect(()=>{
-        console.log(process.env.NEXT_PUBLIC_APIB+"index/studystate");
         fetch(process.env.NEXT_PUBLIC_APIB+"index/studystate")
         .then(res=>res.json())
         .then(data=>setTools(data))

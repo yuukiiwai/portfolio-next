@@ -8,10 +8,7 @@ const Strong:FC = () =>{
     useEffect(()=>{
         fetch(process.env.NEXT_PUBLIC_APIB+"index/strong")
         .then(res=>res.json())
-        .then(data=>{
-            console.log(data);
-            setStrong(data)
-        });
+        .then(data=>setStrong(data));
     },[])
 
     return(

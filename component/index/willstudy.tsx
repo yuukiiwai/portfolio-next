@@ -1,6 +1,7 @@
 import { FC } from "react";
 import styles from "../../styles/Home.module.css";
 import { langstruct } from "../../type";
+import PGimgs from "./pgimage";
 
 interface props{
     langs:langstruct[]
@@ -11,13 +12,7 @@ const Willstudy : FC<props> = (props:props) =>{
         <div className={styles.willstudy}>
             <div>
                 <span>これから勉強したい</span>
-                <div>
-                {props.langs.map((item,key)=>{
-                    return(
-                    <img key={key} src={item.imgurl}/>
-                    )
-                })}
-                </div>
+                <PGimgs langs={props.langs}/>
             </div>
         </div>
     )

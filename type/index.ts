@@ -4,7 +4,7 @@ export type studystate = {
     can:langstruct[]
 }
 export type langstruct = {
-    /* language:string */
+    tech:string
     imgurl:string
 }
 export type history = {
