@@ -89,6 +89,9 @@
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 .willstudy > div > div >img{
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
     padding-bottom: 20px;
 }
 
@@ -126,6 +129,7 @@
     grid-template-columns: 1fr 1fr;
 }
 .studying > div > div >img{
+    width: 100px;
     padding-bottom: 20px;
 }
 
@@ -165,6 +169,7 @@
     height: 100%;
 }
 .canuse > div > div >img{
+    width: 100px;
     padding-bottom: 20px;
 }
 
