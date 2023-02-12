@@ -1,4 +1,4 @@
-import { NextPage } from "next";
+import { GetServerSideProps, NextPage } from "next";
 import  Head  from "next/head";
 import { useEffect, useState } from "react";
 import Nav from "../component/nav";
@@ -7,23 +7,28 @@ import { workType } from "../type/work";
 import Introduction from "../component/work/intro";
 import Page1 from "../component/work/page1";
 
-const Work: NextPage = () => {
-    const [works,setWorks] = useState<workType[]>([]);
-    const [titles,setTitles] = useState<string[]>([]);
+interface props{
+    works:workType[]
+    titles:string[]
+}
 
-    useEffect(()=>{
-        fetch(process.env.NEXT_PUBLIC_APIB+"work")
-        .then(res => res.json())
-        .then(data=>{
-            setWorks(data);
-            let newtitles = [];
-            for(let i = 0; i < data.length; i++){
-                newtitles.push(data[i].title);
-            }
-            setTitles(newtitles);
-        })
-        .catch(()=>{setWorks([])});
-    },[]);
+export const getServerSideProps :  GetServerSideProps = async()=>{
+    const res = await fetch(process.env.NEXT_PUBLIC_APIB+"work");
+    const works = (await res.json()) as workType[];
+    let titles = [];
+    for(let i = 0; i < works.length; i++){
+        titles.push(works[i].title);
+    }
+    const props : props = {
+        works:works,
+        titles:titles
+    }
+    return {props:props}
+}
+
+const Work:NextPage<props> = (props:props) => {
+    const works = props.works;
+    const titles = props.titles;
 
     const worksIntroduction = () => {
         const worksintro = works.map((item,key)=>{
